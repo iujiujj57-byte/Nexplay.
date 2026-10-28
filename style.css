@@ -1,0 +1,166 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background:
+        radial-gradient(ellipse at top, #291010 0%, transparent 55%),
+        #080808;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ban-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 32px;
+    text-align: center;
+    background: #111111;
+    border: 1px solid #383030;
+    border-radius: 18px;
+    box-shadow: 0 0 50px #ff202015;
+    animation: appear 0.7s ease;
+}
+
+.icon {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff3434;
+    border-radius: 50%;
+    color: #ff3434;
+    font-size: 48px;
+    font-weight: bold;
+    box-shadow: 0 0 25px #ff343430;
+    animation: pulse 2s infinite;
+}
+
+.status {
+    color: #ff5252;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+}
+
+h1 {
+    font-size: clamp(30px, 7vw, 42px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+h1 span {
+    color: #ff3434;
+}
+
+.description {
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.divider {
+    height: 1px;
+    background: #303030;
+    margin: 28px 0;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.detail span {
+    color: #777777;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.detail strong {
+    color: #e5e5e5;
+    font-size: 12px;
+    text-align: right;
+}
+
+.notice {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 32px;
+    padding: 12px 18px;
+    border: 1px solid #532323;
+    border-radius: 6px;
+    background: #241010;
+    color: #ff5252;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #ff3434;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff3434;
+}
+
+.footer {
+    margin-top: 26px;
+    color: #666666;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 15px #ff343420;
+    }
+    50% {
+        box-shadow: 0 0 35px #ff343460;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 380px) {
+    .ban-card {
+        padding: 30px 20px;
+    }
+
+    .detail span {
+        font-size: 9px;
+    }
+}
+
+
